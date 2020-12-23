@@ -1,0 +1,36 @@
+{
+    "OpenEnded":
+    {
+        "train" : 
+        {
+            "question":"../Data/MSCOCO/2014/Question_train/OpenEnded_mscoco_train2014_questions.json",
+            "answer":  "../Data/MSCOCO/2014/Question_train/mscoco_train2014_annotations.json"
+        },
+        "val":
+        {
+            "question":"../Data/MSCOCO/2014/Question_val/OpenEnded_mscoco_val2014_questions.json",
+            "answer":  "../Data/MSCOCO/2014/Question_val/mscoco_val2014_annotations.json"
+        },
+        "test":
+        {
+            "question":"../Data/MSCOCO/2014/Question_test/OpenEnded_mscoco_test-dev2015_questions.json"
+        }
+    },
+    "Multiple":
+    {
+        "train" : 
+        {
+            "question":"../Data/MSCOCO/2014/Question_train/MultipleChoice_mscoco_train2014_questions.json",
+            "answer":  "../Data/MSCOCO/2014/Question_train/mscoco_train2014_annotations.json"
+        },
+        "val":
+        {
+            "question":"../Data/MSCOCO/2014/Question_val/MultipleChoice_mscoco_val2014_questions.json",
+            "answer":  "../Data/MSCOCO/2014/Question_val/mscoco_val2014_annotations.json"
+        },
+        "test":
+        {
+            "question":"../Data/MSCOCO/2014/Question_test/MultipleChoice_mscoco_test-dev2015_questions.json"
+        }
+    }
+}
