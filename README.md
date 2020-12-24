@@ -2,6 +2,9 @@
 
 VQA for tensorflow2
 
+[Original Paper](https://arxiv.org/pdf/1505.00468.pdf)
+[Site](https://visualqa.org/)
+
 ## Make Vocab
 
 Make_Vocab.py makes Vocab.json files and supports two modes
