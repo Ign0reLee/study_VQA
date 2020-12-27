@@ -4,6 +4,11 @@ import itertools
 from nltk import word_tokenize
 from collections import Counter
 
+def Json_Load(json_path):
+    with open(json_path, 'r') as json_file:
+        json_data = json.load(json_file)
+    return json_data
+
 def prepare_question(question_data):
     """
     Prepare MS COCO VQA V1 Question Data
