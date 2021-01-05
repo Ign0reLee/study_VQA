@@ -19,5 +19,6 @@ class VQA(Model):
         super(VQA, self).__init__(name="VQA")
     
     def call(self):
+        return 0;
 
 

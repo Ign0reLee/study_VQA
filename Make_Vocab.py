@@ -16,7 +16,7 @@ parser.add_argument("--vocab_name", type=str, help="Output Vocab File Name", def
 parser.add_argument("--max_answer", type=int, help="Max Answer Size", default=3000)
 parser.add_argument("--start", type=int, help="Start Token Size", default=1)
 parser.add_argument("--set", action="store_true", help="If want to use setting json file", default=False)
-parser.add_argument("-s","--set_path", type=str, help="If using setting json file, Input set.json file path", default=os.path.join(".","vocab","set.json"))
+parser.add_argument("-s","--set_path", type=str, help="If using setting json file, Input set.json file path", default=os.path.join(".","set.json"))
 parser.add_argument("--set_task", type=str, help="Set Task", choices=["OpenEnded", "Multiple"],default="OpenEnded")
 parser.add_argument("--set_mode", type=str, help="Set Mode", default="train")
 

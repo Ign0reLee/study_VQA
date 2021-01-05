@@ -29,6 +29,15 @@ def prepare_answer(answer_data):
         answer = word_tokenize(answer.lower())
         yield answer
 
+def prepare_image(question_data):
+    """
+    Prepare MS COCO VQA V1 Image Number
+    """
+    
+    image_ids = [q['image_id'] for q in question_data['questions']]
+    for image_id in image_ids:
+        yield image_id
+
 def Check_Data(questions, answers):
     """
     Check right Pair Data Input
