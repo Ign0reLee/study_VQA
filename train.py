@@ -60,7 +60,7 @@ def train_step():
         output = model()
 """
 
-@tf.function
+#@tf.function
 Data = DataPreprocessing(question_path, answer_path, vocab_path, image_path, answer_len, layer_name)
 Model = VQA(Data.question_max_len)
 

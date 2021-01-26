@@ -30,3 +30,18 @@ options
 - --set_mode : choice file path (default : train)
 - --max_answer : maximum answer token count (default : 3000)
 - --start : question vocab's starting point (default : 1)
+
+
+<br/>
+
+## Run Train
+
+```cmd
+python train.py --question QuestionFilePath --answer AnswerFilePath --vocab VocabFilePath --image ImageFolderPath [optional]
+```
+options
+- --batch_size : batch size (default : 8)
+- --lr : learning rate (default : 1e-4)
+- --lr_decay : learning rate decacy(Time Inverse) (default : 5e-5)
+- --epoch : question vocab's starting point (default : 100)
+- --answer_len : Maximum Answer Length (default : 3000)
