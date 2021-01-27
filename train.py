@@ -61,7 +61,8 @@ def train_step():
 """
 
 #@tf.function
-Data = DataPreprocessing(question_path, answer_path, vocab_path, image_path, answer_len, layer_name)
+Encdoer = pre_vgg(layer_name)
+Data = DataPreprocessing(question_path, answer_path, vocab_path, image_path, answer_len)
 Model = VQA(Data.question_max_len)
 
 lr_schedule = optimizers.schedules.InverseTimeDecay(lr, decay_steps=1, decay_rate=lr_decay, staircase=False)
@@ -70,10 +71,12 @@ optimizer = optimizers.Adam(learning_rate=lr_schedule)
 
 def main():
 
-    for epoch in epochs:
+    for epoch in range(epochs):
         Data.shuffle()
 
         train_question, train_answer, train_img = Data.make_batch(batch_size=batch_size)
+        train_img = preprocess_input(train_img)
+        
         
         
 
