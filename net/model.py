@@ -21,12 +21,16 @@ class VQA(Model):
 
         self.text_process = TextProcessing(tx_size,em_size, features, rate)
         self.image_process = ImageProcessing()
+        self.Dense1 = layers.Dense(units=3000, activation="softmax")
         
     def call(self, inputs):
-        
+
         question, image = inputs
         text = self.text_process(question)
         image = self.image_process(image)
+
+        x = tf.math.multiply(text, image)
+        return x
 
 class TextProcessing(Model):
 

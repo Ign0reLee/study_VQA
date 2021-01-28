@@ -61,7 +61,7 @@ def train_step():
 """
 
 #@tf.function
-Encdoer = pre_vgg(layer_name)
+Encoder = pre_vgg(layer_name)
 Data = DataPreprocessing(question_path, answer_path, vocab_path, image_path, answer_len)
 Model = VQA(Data.question_max_len)
 
@@ -76,6 +76,7 @@ def main():
 
         train_question, train_answer, train_img = Data.make_batch(batch_size=batch_size)
         train_img = preprocess_input(train_img)
+        train_img = Encoder(train_img)
         
         
         
