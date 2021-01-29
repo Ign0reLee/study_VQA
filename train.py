@@ -53,12 +53,12 @@ answer_len    = int(args.answer_len)
 # Define Function
 
 # Set train_step()
-"""
+
 @tf.function
-def train_step():
+def train_step(question, image,answer):
     with tf.GradientTape() as tape:
-        output = model()
-"""
+        pred = Model(question, image,training=True)
+
 
 #@tf.function
 Encoder = pre_vgg(layer_name)
